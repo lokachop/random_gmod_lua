@@ -2,8 +2,7 @@
 	raycaster_traceline.lua
 
 	another dumb raycaster by lokachop, this time using traceLine to make it fast, also textured too
-
-]]
+]]--
 
 LkRc = {}
 
@@ -139,9 +138,8 @@ hook.Add("HUDPaint", "LkRcRaycast", function()
 		local lcol = math.Clamp(tr.HitNormal:Dot(Vector(.25, .75, 0)), .2, 1) * 255
 
 		local coldcalc = math.Clamp(dcalc / 256, 1, 1000)
-		--lcol = lcol / coldcalc
 
-		surface.SetDrawColor(lcol / coldcalc, lcol / (coldcalc * .85), lcol / coldcalc)
+		surface.SetDrawColor(lcol / coldcalc, lcol / coldcalc, lcol / coldcalc)
 
 
 		local hpos = tr.HitPos
