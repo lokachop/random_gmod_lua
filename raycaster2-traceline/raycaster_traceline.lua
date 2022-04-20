@@ -151,7 +151,7 @@ hook.Add("HUDPaint", "LkRcRaycast", function()
 		surface.SetMaterial(GetFBMaterial(parseMapTex(tr.HitTexture)))
 		surface.DrawTexturedRectUV(i * LkRc.ResDiv, (ScrH() / 2) - (wh / 2), LkRc.ResDiv, wh,
 			fx, 0,
-			fx + LkRc.ResDiv / 4096, 1
+			fx + LkRc.ResDiv * (dcalc / (4096 * 16)), 1
 		)
 	end
 end)
