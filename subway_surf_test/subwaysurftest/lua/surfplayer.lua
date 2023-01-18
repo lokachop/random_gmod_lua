@@ -1,0 +1,1 @@
+SurfPlayer = SurfPlayer or {}
